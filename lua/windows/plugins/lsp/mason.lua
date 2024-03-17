@@ -33,6 +33,7 @@ return {
 				"tailwindcss",
 				"svelte",
 				"sqls",
+				"jdtls",
 				"lua_ls",
 				"graphql",
 				"emmet_ls",
@@ -49,6 +50,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"sqlfluff",
+				"google-java-format", -- java formatter
 				"black", -- python formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter

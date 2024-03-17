@@ -112,6 +112,37 @@ return {
 			on_attach = on_attach,
 		})
 
+		-- configure java server
+		lspconfig["jdtls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			settings = {
+				java = {
+					eclipse = {
+						downloadSources = true,
+					},
+					configuration = {
+						updateBuildConfiguration = "interactive",
+					},
+					maven = {
+						downloadSources = true,
+					},
+					implementationsCodeLens = {
+						enabled = true,
+					},
+					referencesCodeLens = {
+						enabled = true,
+					},
+					references = {
+						includeDecompiledSources = true,
+					},
+					format = {
+						enabled = true,
+					},
+				},
+			},
+		})
+
 		-- configure sql server
 		lspconfig["sqls"].setup({
 			capabilities = capabilities,
