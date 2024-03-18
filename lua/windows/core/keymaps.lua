@@ -4,6 +4,7 @@ vim.api.nvim_set_keymap("n", "<leader>r", [[:w<CR>:term python %<CR>]], { norema
 local keymap = vim.keymap -- for conciseness
 
 -- NORMAL mode keymaps
+keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "Open LazyGit" })
 keymap.set("n", "<leader>a", "ggVG", { desc = "select all" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 keymap.set("n", "<C-_>", function()
