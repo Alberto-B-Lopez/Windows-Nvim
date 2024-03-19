@@ -16,7 +16,7 @@ require("lazy").setup({ { import = "windows.plugins" }, { import = "windows.plug
 		colorscheme = { "catppuccin" },
 	},
 	checker = {
-		enabled = true,
+		enabled = false,
 		notify = false,
 	},
 	change_detection = {
