@@ -77,9 +77,16 @@ return {
 		})
 
 		-- configure typescript server with plugin
+		lspconfig["eslint"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure typescript server with plugin
 		lspconfig["tsserver"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "typescript", "typescriptreact" },
 		})
 
 		-- configure css server

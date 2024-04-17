@@ -33,3 +33,17 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- keymap.set("v", "<C-j", ":m.1<CR>")
 -- keymap.set("v", "<C-k", ":m.-2<CR>")
+
+-- Zoxide
+local function zoxide_explore(directory)
+	local dir = vim.fn.trim(vim.fn.system("zoxide query " .. (directory or "")))
+	vim.cmd("Explore " .. dir)
+end
+
+vim.keymap.set("n", "<leader>z", function()
+	vim.ui.input({ prompt = "Enter directory to explore: " }, function(input)
+		if input then
+			zoxide_explore(input)
+		end
+	end)
+end, { desc = "Explore directory from zoxide" })
