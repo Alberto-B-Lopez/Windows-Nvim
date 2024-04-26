@@ -7,10 +7,10 @@ return {
 		local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
 
 		lint.linters_by_ft = {
-			typescript = { "biomejs", "eslint_d", "eslint" },
-			javascript = { "biomejs", "eslint_d", "eslint" },
-			typescriptreact = { "biomejs", "eslint_d", "eslint" },
-			javascriptreact = { "biomejs", "eslint_d", "eslint" },
+			typescript = { "biomejs", "eslint" },
+			javascript = { "biomejs", "eslint" },
+			typescriptreact = { "biomejs", "eslint" },
+			javascriptreact = { "biomejs", "eslint" },
 		}
 
 		local eslint = lint.linters.eslint_d
@@ -34,8 +34,8 @@ return {
 		})
 
 		lint.linters_by_ft = {
-			javascript = { "eslint_d" },
-			typescript = { "eslint_d" },
+			javascript = { "eslint" },
+			typescript = { "eslint" },
 			-- sql = { "sqlfluff" },
 			python = { "flake8" },
 		}
