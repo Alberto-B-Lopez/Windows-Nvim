@@ -11,7 +11,7 @@ keymap.set("n", "<C-_>", function()
 	require("Comment.api").toggle.linewise.current()
 end, { noremap = true, silent = true })
 -- Netrw Normal Mode
-keymap.set("n", "<leader>ee", ":Explore<CR>", { desc = "Open Netrw" })
+keymap.set("n", "<leader>ee", "<CMD>Oil<CR>", { desc = "Open Netrw" })
 vim.keymap.set("n", "<leader>ma", function()
 	local bufnr = vim.api.nvim_get_current_buf()
 	local buftype = vim.api.nvim_buf_get_option(bufnr, "buftype")
