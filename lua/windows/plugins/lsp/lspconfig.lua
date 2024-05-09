@@ -117,6 +117,7 @@ return {
 		lspconfig["tailwindcss"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescriptreact", "svelte" },
 		})
 
 		-- configure java server
