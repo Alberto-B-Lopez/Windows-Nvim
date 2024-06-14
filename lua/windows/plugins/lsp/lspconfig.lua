@@ -32,7 +32,6 @@ return {
 			lsp_location,
 			"--includeCompletionsWithSnippetText",
 			"--includeAutomaticOptionalChainCompletions",
-			"--logToConsole",
 		}
 
 		-- import cmp-nvim-lsp plugin
